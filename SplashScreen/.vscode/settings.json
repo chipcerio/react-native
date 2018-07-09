@@ -3,5 +3,6 @@
   "javascript.format.enable": false,
   "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "git.autorefresh": true,
 }
