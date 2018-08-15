@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import firebase from 'react-native-firebase';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -21,7 +22,29 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  constructor() {
+    super();
+    this.unsubscriber = null;
+  }
+
+  state = {
+    user: null,
+  };
+
+  componentDidMount() {
+    this.unsubscriber = firebase.auth().onAuthStateChanged(user => {
+      this.setState({ user });
+    });
+  }
+
+  componentWillMount() {
+    if (this.unsubscriber) {
+      this.unsubscriber();
+    }
+  }
+
   render() {
+    console.log('state:', this.state);
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
