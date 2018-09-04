@@ -63,7 +63,12 @@
         "forbid": []
       }
     ],
-    "react/prop-types": 0,
+    "react/prop-types": 2,
+    "react/jsx-no-bind": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-direct-mutation-state": 2,
     "import/extensions": [
       1,
       "never",
