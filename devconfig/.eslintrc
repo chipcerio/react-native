@@ -1,16 +1,6 @@
 {
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": [
-    "prettier",
-    "react",
-    "react-native",
-    "jsx-a11y",
-    "import"
-  ],
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "react", "react-native", "jsx-a11y", "import"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -30,30 +20,20 @@
     "import/no-unresolved": [
       2,
       {
-        "ignore": [
-          ".png$",
-          ".webp$",
-          ".jpg$",
-          "ViewPropTypes"
-        ]
+        "ignore": [".png$", ".webp$", ".jpg$", "ViewPropTypes"]
       }
     ],
     "no-console": 0,
     "react/jsx-filename-extension": [
       0,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "no-underscore-dangle": [
       1,
       {
-        "allow": [
-          "__typename"
-        ]
+        "allow": ["__typename"]
       }
     ],
     "react/prefer-stateless-function": 0,
@@ -63,7 +43,12 @@
         "forbid": []
       }
     ],
-    "react/prop-types": 2,
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": ["navigation"]
+      }
+    ],
     "react/jsx-no-bind": 2,
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-uses-vars": 2,
